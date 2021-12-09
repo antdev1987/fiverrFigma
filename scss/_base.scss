@@ -180,3 +180,25 @@ body {
 ///////////////////////
 /// Utility Classes End
 ///////////////////////
+
+///////////////////////
+/// Mixing Start
+///////////////////////
+@mixin grid($columns, $min, $max, $rows-size, $value, $justify: false) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax($min, $max));
+  grid-auto-rows: $rows-size;
+
+  @if $justify {
+    justify-content: $value;
+  }
+}
+
+@mixin flex($align, $justify-content, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify-content;
+}
+///////////////////////
+/// Mixing End
+///////////////////////

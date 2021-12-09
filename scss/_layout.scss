@@ -1,8 +1,18 @@
 .container {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+///////////////////////
+/// Grid Start
+///////////////////////
+.menu-grid {
+  @include grid(auto-fit, 24rem, 30rem, 40rem, space-between, $justify: true);
+}
+///////////////////////
+/// Grid End
+///////////////////////
 
 ///////////////////////
 /// Header Start
@@ -18,9 +28,10 @@
       $color-green 80%
     );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
-    transition: all 1s ease;
+    transition: background-position 1s ease;
 
     &:hover {
       background-position: right;
@@ -33,4 +44,31 @@
 }
 ///////////////////////
 /// Header End
+///////////////////////
+
+///////////////////////
+/// Menu Start
+///////////////////////
+.menu {
+  a {
+    border: 1px solid white;
+    text-decoration: none;
+    position: relative;
+
+    &:hover p {
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    p {
+      transition: all 1s ease-in-out;
+      position: absolute;
+      top: 90%;
+      left: 2rem;
+    }
+  }
+}
+///////////////////////
+/// Menu End
 ///////////////////////

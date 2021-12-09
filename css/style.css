@@ -122,21 +122,42 @@ body {
   padding-left: 10rem; }
 
 .container {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 2rem; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 30rem));
+  grid-auto-rows: 40rem;
+  justify-content: space-between; }
 
 .header h1 {
   font-size: 6rem;
   line-height: 7.3rem;
   background-image: linear-gradient(95deg, #5effca 0, #49a8ff 35%, #5effca 80%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200%;
-  transition: all 1s ease; }
+  transition: background-position 1s ease; }
   .header h1:hover {
     background-position: right; }
 
 .header p {
   font-size: 2rem;
   line-height: 3rem; }
+
+.menu a {
+  border: 1px solid white;
+  text-decoration: none;
+  position: relative; }
+  .menu a:hover p {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; }
+  .menu a p {
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 90%;
+    left: 2rem; }
