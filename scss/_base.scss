@@ -194,6 +194,14 @@ body {
   }
 }
 
+@mixin linear($child) {
+  &:nth-child(#{$child}) {
+    &::after {
+      @content
+    }
+  }
+}
+
 @mixin flex($align, $justify-content, $direction) {
   display: flex;
   align-items: $align;
