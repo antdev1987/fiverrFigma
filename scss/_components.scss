@@ -17,3 +17,12 @@
 
   @include linearhover;
 }
+
+.button {
+  font-size: 1.6rem !important;
+  border-radius: 3rem;
+
+  &__blue {
+    background: linear-gradient(93.03deg, #49a8ff 4.45%, #5effca 115.15%);
+  }
+}
