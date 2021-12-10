@@ -133,21 +133,41 @@
 .design {
   &__layout {
     gap: 5rem;
+
+    @include for-size(490px) {
+      flex-direction: column;
+    }
+  }
+
+  h2,
+  h3 {
+    font-size: 6rem;
+    color: $color-white;
+    transition: transform 0.25s ease;
+  }
+
+  h2 {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  h3 {
+    display: none;
+  }
+
+  @include for-size(490px) {
+    h2 {
+      display: none;
+    }
+    h3 {
+      display: block;
+    }
   }
 
   &__box {
     flex: 1;
     gap: 5rem;
-
-    h2 {
-      font-size: 6rem;
-      color: $color-white;
-      transition: transform 0.25s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
 
     main {
       height: 30rem;
@@ -189,6 +209,9 @@
     }
 
     &--2 {
+      @include for-size(phone) {
+        display: none;
+      }
       main {
         height: 100%;
       }
@@ -196,7 +219,7 @@
 
     &--card__1 {
       div {
-        background: url(../images/img.png) center center / cover;
+        background: url(../images/Img.png) center center / cover;
       }
       a {
         &::after {
