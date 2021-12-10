@@ -309,37 +309,56 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-auto-rows: 40.32rem;
   gap: 2rem; }
+  @media (max-width: 767px) {
+    .blog__layout {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 40.32rem 40.32rem; } }
+
+.blog a {
+  position: relative;
+  border: 1px solid transparent;
+  transition: border 0.25s ease;
+  font-size: 3.2rem; }
+  .blog a span {
+    display: block;
+    font-size: 1.8rem; }
+  .blog a::after {
+    background: #171717; }
+  .blog a:hover {
+    border: 1px solid #fff; }
+
+.blog .button__blog {
+  height: auto;
+  width: auto;
+  border: 1px solid #fff;
+  transition: border 0.7s ease-in;
+  color: #fff; }
+  .blog .button__blog::after {
+    background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
+    border-radius: 3rem; }
+  .blog .button__blog--phone {
+    display: none; }
+  @media (max-width: 767px) {
+    .blog .button__blog {
+      border-radius: 0;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem; }
+      .blog .button__blog::after {
+        border-radius: 0; }
+      .blog .button__blog--desktop {
+        display: none; }
+      .blog .button__blog--phone {
+        display: inline-block; } }
+  .blog .button__blog:hover {
+    border: 1px solid transparent; }
 
 .blog__box h2 {
   color: #fff;
   font-size: 6rem;
   word-break: keep-all;
   width: 75%; }
-
-.blog__box a {
-  position: relative;
-  border: 1px solid transparent;
-  transition: border 0.25s ease;
-  font-size: 3.2rem; }
-  .blog__box a span {
-    display: block;
-    font-size: 1.8rem; }
-  .blog__box a::after {
-    background: #171717; }
-  .blog__box a:hover {
-    border: 1px solid #fff; }
-
-.blog__box--1 a {
-  height: auto;
-  width: auto;
-  border: 1px solid #fff;
-  transition: border 0.7s ease-in;
-  color: #fff; }
-  .blog__box--1 a::after {
-    background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
-    border-radius: 3rem; }
-  .blog__box--1 a:hover {
-    border: 1px solid transparent; }
 
 .blog__box--2 {
   background: linear-gradient(193.81deg, #ffb197 12.81%, #81348d 90.13%); }
@@ -355,6 +374,16 @@ a {
 
 .blog__box--6 {
   background: linear-gradient(204.23deg, #7b61ff 47.15%, #ce82db 84.48%); }
+
+@media (max-width: 767px) {
+  .blog__box--1 {
+    grid-column: span 2 / auto;
+    text-align: center;
+    align-self: center; }
+    .blog__box--1 h2 {
+      width: 100%; }
+  .blog__box--3 {
+    display: none; } }
 
 .collaborate h2 {
   font-size: 5.2rem; }

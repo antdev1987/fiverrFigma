@@ -321,6 +321,71 @@
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-auto-rows: 40.32rem;
     gap: 2rem;
+
+    @include for-size(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 40.32rem 40.32rem;
+    }
+  }
+
+  a {
+    position: relative;
+    border: 1px solid transparent;
+    transition: border 0.25s ease;
+    font-size: 3.2rem;
+
+    span {
+      display: block;
+      font-size: 1.8rem;
+    }
+
+    &::after {
+      background: $color-black;
+    }
+    &:hover {
+      border: 1px solid $color-white;
+    }
+  }
+
+  .button__blog {
+    height: auto;
+    width: auto;
+    border: 1px solid $color-white;
+    transition: border 0.7s ease-in;
+    color: $color-white;
+
+    &::after {
+      background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
+      border-radius: 3rem;
+    }
+
+    &--phone {
+      display: none;
+    }
+
+    @include for-size(phone) {
+      border-radius: 0;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+
+      &::after {
+        border-radius: 0;
+      }
+
+      &--desktop {
+        display: none;
+      }
+
+      &--phone {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+    }
   }
   &__box {
     h2 {
@@ -328,43 +393,6 @@
       font-size: 6rem;
       word-break: keep-all;
       width: 75%;
-    }
-    a {
-      position: relative;
-      border: 1px solid transparent;
-      transition: border 0.25s ease;
-      font-size: 3.2rem;
-
-      span {
-        display: block;
-        font-size: 1.8rem;
-      }
-
-      &::after {
-        background: $color-black;
-      }
-      &:hover {
-        border: 1px solid $color-white;
-      }
-    }
-
-    &--1 {
-      a {
-        height: auto;
-        width: auto;
-        border: 1px solid $color-white;
-        transition: border 0.7s ease-in;
-        color: $color-white;
-
-        &::after {
-          background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
-          border-radius: 3rem;
-        }
-
-        &:hover {
-          border: 1px solid transparent;
-        }
-      }
     }
 
     &--2 {
@@ -381,6 +409,22 @@
     }
     &--6 {
       background: linear-gradient(204.23deg, #7b61ff 47.15%, #ce82db 84.48%);
+    }
+
+    @include for-size(phone) {
+      &--1 {
+        grid-column: span 2 / auto;
+        text-align: center;
+        align-self: center;
+
+        h2 {
+          width: 100%;
+        }
+      }
+
+      &--3 {
+        display: none;
+      }
     }
   }
 }
