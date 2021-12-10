@@ -8,7 +8,7 @@
 /// Grid Start
 ///////////////////////
 .menu-grid {
-  @include grid(auto-fit, 24rem, 1fr, 40rem, '', $justify: true);
+  @include grid(auto-fit, 30rem, 1fr, 40rem, '', $justify: false);
   gap: 3rem;
 }
 ///////////////////////
@@ -286,4 +286,78 @@
 
 ///////////////////////
 /// Blog Start
+///////////////////////
+.blog {
+  &__layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-auto-rows: 40.32rem;
+    gap: 2rem;
+  }
+  &__box {
+    h2 {
+      color: $color-white;
+      font-size: 6rem;
+      word-break: keep-all;
+      width: 75%;
+    }
+    a {
+      position: relative;
+      border: 1px solid transparent;
+      transition: border 0.25s ease;
+      font-size: 3.2rem;
+
+      span {
+        display: block;
+        font-size: 1.8rem;
+      }
+
+      &::after {
+        background: $color-black;
+      }
+      &:hover {
+        border: 1px solid $color-white;
+      }
+    }
+
+    &--1 {
+      a {
+        height: auto;
+        width: auto;
+        font-size: 1.6rem;
+        border: 1px solid $color-white;
+        border-radius: 3rem;
+        transition: border 0.7s ease-in;
+        color: $color-white;
+
+        &::after {
+          background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
+          border-radius: 3rem;
+        }
+
+        &:hover {
+          border: 1px solid transparent;
+        }
+      }
+    }
+
+    &--2 {
+      background: linear-gradient(193.81deg, #ffb197 12.81%, #81348d 90.13%);
+    }
+    &--3 {
+      background: linear-gradient(197.7deg, #9bf688 -12.35%, #2a9874 87.9%);
+    }
+    &--4 {
+      background: linear-gradient(160.95deg, #43a685 27.27%, #f6ff97 87.17%);
+    }
+    &--5 {
+      background: linear-gradient(197.4deg, #64d7d0 2.5%, #7798e1 88.07%);
+    }
+    &--6 {
+      background: linear-gradient(204.23deg, #7b61ff 47.15%, #ce82db 84.48%);
+    }
+  }
+}
+///////////////////////
+/// Blog End
 ///////////////////////
