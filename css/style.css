@@ -191,3 +191,21 @@ body {
     top: 90%;
     left: 2rem;
     font-size: 3rem; }
+
+.design__layout {
+  gap: 5rem; }
+
+.design__box {
+  border: 1px solid red;
+  flex: 1;
+  gap: 5rem; }
+  .design__box main {
+    background: url(../images/img.png) center center/cover;
+    height: 30rem; }
+    .design__box main a {
+      border: 1px solid red;
+      width: 100%;
+      height: 100%;
+      display: inline-block; }
+  .design__box--2 main {
+    height: 100%; }
