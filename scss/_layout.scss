@@ -8,8 +8,12 @@
 /// Grid Start
 ///////////////////////
 .menu-grid {
-  @include grid(auto-fit, 30rem, 1fr, 40rem, '', $justify: false);
   gap: 3rem;
+  @include grid(auto-fit, 20rem, 1fr, 40rem, '', $justify: false);
+
+  @include for-size(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 ///////////////////////
 /// Grid End
@@ -376,7 +380,7 @@
 ///////////////////////
 /// Footer Start
 ///////////////////////
-.footer{
+.footer {
   font-size: 1.8rem;
 }
 ///////////////////////
