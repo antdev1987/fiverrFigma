@@ -157,40 +157,32 @@ body {
   font-size: 2rem;
   line-height: 3rem; }
 
-.menu a {
-  border: 1px solid white;
-  text-decoration: none;
-  position: relative;
-  z-index: 10; }
-  .menu a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: -1; }
-  .menu a:nth-child(1)::after {
-    background: linear-gradient(202.92deg, #fff497 11.49%, #ff7c97 39.59%, #7b61ff 68.89%); }
-  .menu a:nth-child(2)::after {
-    background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%); }
-  .menu a:nth-child(3)::after {
-    background: linear-gradient(198.82deg, #81348d 5.34%, #ff7c97 53.63%, #ff5174 85.97%); }
-  .menu a:nth-child(4)::after {
-    background: linear-gradient(167.93deg, #f6ff97 8.81%, #88e475 38.84%, #43a685 65.9%); }
-  .menu a:hover p {
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%; }
-  .menu a:hover::after {
-    opacity: 1; }
-  .menu a p {
-    transition: all 1s ease-in-out;
-    position: absolute;
-    top: 90%;
-    left: 2rem;
-    font-size: 3rem; }
+.menu:nth-child(1)::after {
+  background: linear-gradient(202.92deg, #fff497 11.49%, #ff7c97 39.59%, #7b61ff 68.89%); }
+
+.menu:nth-child(2)::after {
+  background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%); }
+
+.menu:nth-child(3)::after {
+  background: linear-gradient(198.82deg, #81348d 5.34%, #ff7c97 53.63%, #ff5174 85.97%); }
+
+.menu:nth-child(4)::after {
+  background: linear-gradient(167.93deg, #f6ff97 8.81%, #88e475 38.84%, #43a685 65.9%); }
+
+.menu:hover p {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+
+.menu:hover::after {
+  opacity: 1; }
+
+.menu p {
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 90%;
+  left: 2rem;
+  font-size: 3rem; }
 
 .design__layout {
   gap: 5rem; }
@@ -201,11 +193,24 @@ body {
   gap: 5rem; }
   .design__box main {
     background: url(../images/img.png) center center/cover;
-    height: 30rem; }
-    .design__box main a {
-      border: 1px solid red;
-      width: 100%;
-      height: 100%;
-      display: inline-block; }
+    height: 30rem;
+    position: relative; }
   .design__box--2 main {
     height: 100%; }
+
+.card-animated {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  z-index: 10; }
+  .card-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1; }
