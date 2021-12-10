@@ -55,6 +55,15 @@ body {
   }
 }
 
+@mixin linearhover {
+  &:hover {
+    @content;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
 @mixin flex($align, $justify-content, $direction) {
   display: flex;
   align-items: $align;
@@ -67,7 +76,7 @@ body {
 ///////////////////////
 /// Utility Classes End
 ///////////////////////
-.flex{
+.flex {
   display: flex;
 }
 
@@ -78,7 +87,6 @@ body {
 .flex-column {
   flex-direction: column;
 }
-
 
 .txt-Upper {
   text-transform: uppercase;

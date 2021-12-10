@@ -50,57 +50,74 @@
 /// Menu Start
 ///////////////////////
 .menu {
-  @include linear(1) {
-    background: linear-gradient(
-      202.92deg,
-      #fff497 11.49%,
-      #ff7c97 39.59%,
-      #7b61ff 68.89%
-    );
-  }
-
-  @include linear(2) {
-    background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%);
-  }
-
-  @include linear(3) {
-    background: linear-gradient(
-      198.82deg,
-      #81348d 5.34%,
-      #ff7c97 53.63%,
-      #ff5174 85.97%
-    );
-  }
-  @include linear(4) {
-    background: linear-gradient(
-      167.93deg,
-      #f6ff97 8.81%,
-      #88e475 38.84%,
-      #43a685 65.9%
-    );
-  }
-
-  &:hover {
-    p {
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-    }
+  a {
+    border: 1px solid white;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
 
     &::after {
-      opacity: 1;
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      z-index: -1;
+    }
+
+    @include linear(1) {
+      background: linear-gradient(
+        202.92deg,
+        #fff497 11.49%,
+        #ff7c97 39.59%,
+        #7b61ff 68.89%
+      );
+    }
+
+    @include linear(2) {
+      background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%);
+    }
+
+    @include linear(3) {
+      background: linear-gradient(
+        198.82deg,
+        #81348d 5.34%,
+        #ff7c97 53.63%,
+        #ff5174 85.97%
+      );
+    }
+    @include linear(4) {
+      background: linear-gradient(
+        167.93deg,
+        #f6ff97 8.81%,
+        #88e475 38.84%,
+        #43a685 65.9%
+      );
+    }
+
+    &:hover {
+      p {
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    p {
+      transition: all 1s ease-in-out;
+      position: absolute;
+      top: 90%;
+      left: 2rem;
+      font-size: 3rem;
     }
   }
-
-  p {
-    transition: all 1s ease-in-out;
-    position: absolute;
-    top: 90%;
-    left: 2rem;
-    font-size: 3rem;
-  }
 }
-
 ///////////////////////
 /// Menu End
 ///////////////////////
@@ -119,15 +136,111 @@
     gap: 5rem;
 
     main {
-      background: url(../images/img.png) center center / cover;
       height: 30rem;
       position: relative;
+      z-index: 10;
+      overflow: hidden;
+
+      div {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        transition: all 0.7s ease;
+      }
+
+      a {
+        padding: 1rem 2rem;
+        opacity: 0;
+        transition: all 0.7s ease;
+
+        span {
+          display: block;
+        }
+      }
+
+      &:hover {
+        div {
+          transform: scale(1.1);
+        }
+
+        a {
+          opacity: 1;
+        }
+      }
     }
 
     &--2 {
       main {
         height: 100%;
       }
+    }
+
+    &--card__1 {
+      div {
+        background: url(../images/img.png) center center / cover;
+      }
+      a {
+        &::after {
+          background: rgba(15, 49, 61, 0.6);
+        }
+      }
+    }
+
+    &--card__2 {
+      div {
+        background: url(../images/img2.png) center center / cover;
+      }
+      a {
+        &::after {
+          background: rgba(79, 13, 86, 0.6);
+        }
+      }
+    }
+
+    &--card__3 {
+      div {
+        background: url(../images/img3.png) center center / cover;
+      }
+      a {
+        &::after {
+          background: rgba(94, 96, 12, 0.6);
+        }
+      }
+    }
+
+    &--card__4 {
+      div {
+        background: url(../images/img4.png) center center / cover;
+      }
+      a {
+        &::after {
+          background: rgba(0, 55, 108, 0.6);
+        }
+      }
+    }
+
+    &--card__5 {
+      div {
+        background: url(../images/img5.png) center center / cover;
+      }
+      a {
+        &::after {
+          background: rgba(49, 136, 107, 0.63);
+        }
+      }
+    }
+
+    &--card__6 {
+      a {
+        &::after {
+          background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%);
+        }
+      }
+    }
+
+    button {
+      position: relative;
     }
   }
 }
