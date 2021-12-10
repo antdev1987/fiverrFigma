@@ -8,7 +8,8 @@
 /// Grid Start
 ///////////////////////
 .menu-grid {
-  @include grid(auto-fit, 24rem, 30rem, 40rem, space-between, $justify: true);
+  @include grid(auto-fit, 24rem, 1fr, 40rem, '', $justify: true);
+  gap: 3rem;
 }
 ///////////////////////
 /// Grid End
@@ -112,7 +113,7 @@
     p {
       transition: all 1s ease-in-out;
       position: absolute;
-      top: 90%;
+      top: 85%;
       left: 2rem;
       font-size: 3rem;
     }
@@ -131,9 +132,18 @@
   }
 
   &__box {
-    border: 1px solid red;
     flex: 1;
     gap: 5rem;
+
+    h2 {
+      font-size: 6rem;
+      color: $color-white;
+      transition: transform .25s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
     main {
       height: 30rem;
@@ -150,12 +160,16 @@
       }
 
       a {
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
         opacity: 0;
         transition: all 0.7s ease;
+        color: $color-white;
+        z-index: 10;
+        font-size: 3.2rem;
 
         span {
           display: block;
+          font-size: 1.2rem;
         }
       }
 
@@ -241,6 +255,23 @@
 
     button {
       position: relative;
+      margin-top: 5rem;
+      background: transparent;
+      border: none;
+      width: 100%;
+
+      a {
+        display: inline-block;
+        color: $color-white;
+        width: 100%;
+        padding: 2rem 0;
+        border: 1px solid;
+        transition: border 1s ease-in-out;
+
+        &:hover {
+          border: 1px solid transparent;
+        }
+      }
     }
   }
 }
