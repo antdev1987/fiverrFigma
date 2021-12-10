@@ -206,7 +206,7 @@ a {
   .design__box h2 {
     font-size: 6rem;
     color: #fff;
-    transition: transform .25s ease; }
+    transition: transform 0.25s ease; }
     .design__box h2:hover {
       transform: scale(1.1); }
   .design__box main {

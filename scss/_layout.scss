@@ -138,7 +138,7 @@
     h2 {
       font-size: 6rem;
       color: $color-white;
-      transition: transform .25s ease;
+      transition: transform 0.25s ease;
 
       &:hover {
         transform: scale(1.1);
@@ -269,7 +269,7 @@
         transition: border 1s ease-in-out;
         font-size: 2.4rem;
 
-        &::first-letter{
+        &::first-letter {
           text-transform: capitalize;
         }
 
@@ -282,4 +282,8 @@
 }
 ///////////////////////
 /// Design End
+///////////////////////
+
+///////////////////////
+/// Blog Start
 ///////////////////////
