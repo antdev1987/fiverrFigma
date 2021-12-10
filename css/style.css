@@ -270,7 +270,10 @@ a {
       width: 100%;
       padding: 2rem 0;
       border: 1px solid;
-      transition: border 1s ease-in-out; }
+      transition: border 1s ease-in-out;
+      font-size: 2.4rem; }
+      .design__box button a::first-letter {
+        text-transform: capitalize; }
       .design__box button a:hover {
         border: 1px solid transparent; }
 
