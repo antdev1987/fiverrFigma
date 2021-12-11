@@ -140,8 +140,16 @@ a {
   display: flex;
 }
 
+.align-Center {
+  align-items: center;
+}
+
 .jf-sb {
   justify-content: space-between;
+}
+
+.jf-around{
+  justify-content: space-around;
 }
 
 .flex-column {

@@ -26,8 +26,14 @@ a {
 .flex {
   display: flex; }
 
+.align-Center {
+  align-items: center; }
+
 .jf-sb {
   justify-content: space-between; }
+
+.jf-around {
+  justify-content: space-around; }
 
 .flex-column {
   flex-direction: column; }
@@ -414,3 +420,71 @@ a {
   border-radius: 3rem; }
   .button__blue {
     background: linear-gradient(93.03deg, #49a8ff 4.45%, #5effca 115.15%); }
+
+.animation {
+  position: relative;
+  width: 20rem;
+  z-index: 10; }
+  @media (max-width: 1220px) {
+    .animation {
+      width: 25rem; } }
+  .animation div {
+    padding: 0.85rem 0;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+    position: relative;
+    background: #252629;
+    border-radius: 30rem; }
+    .animation div ul {
+      list-style: none;
+      margin-left: 2rem; }
+      .animation div ul li {
+        opacity: 0;
+        transition: all 1s; }
+    .animation div span {
+      z-index: 10;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      transition: transform 1s ease;
+      cursor: pointer; }
+    .animation div::after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(229.66deg, #5effca -21.9%, #49a8ff 80.47%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 30rem;
+      opacity: 1;
+      transition: opacity 1s ease; }
+  .animation input {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    transition: color, padding 1s ease;
+    background: transparent;
+    z-index: 10;
+    margin-left: -2rem; }
+    .animation input:focus + div {
+      width: 25rem; }
+      @media (max-width: 1220px) {
+        .animation input:focus + div {
+          width: 30rem; } }
+      .animation input:focus + div span {
+        transform: rotateY(160deg); }
+      .animation input:focus + div li {
+        opacity: 1;
+        z-index: 10; }
+      .animation input:focus + div::after {
+        opacity: 0; }
+    .animation input:focus {
+      width: 25rem;
+      background: transparent;
+      color: transparent;
+      cursor: initial; }
