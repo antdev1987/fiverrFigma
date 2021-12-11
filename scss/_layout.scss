@@ -262,6 +262,10 @@
     }
 
     &--card__5 {
+      @include for-size(490px) {
+        display: none;
+      }
+
       div {
         background: url(../images/img5.png) center center / cover;
       }
@@ -273,10 +277,15 @@
     }
 
     &--card__6 {
+      
       a {
         &::after {
           background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%);
         }
+      }
+
+      @include for-size(490px) {
+        margin-top: -10rem !important;
       }
     }
 
