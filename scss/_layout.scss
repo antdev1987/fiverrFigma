@@ -24,7 +24,7 @@
 ///////////////////////
 .header {
   padding: 5rem 2rem 0 2rem;
-  @include for-size(tablet,up){
+  @include for-size(tablet, up) {
     padding-left: 12.3rem;
   }
   h1 {
@@ -42,8 +42,6 @@
     -webkit-text-fill-color: transparent;
     background-size: 200%;
     transition: background-position 300ms ease;
-
-    
 
     &:hover {
       background-position: right;
@@ -202,7 +200,6 @@
         z-index: 10;
         font-size: 3.2rem;
         font-weight: 600;
-        font-family: 'lato', sans-serif;
 
         span {
           display: block;
@@ -222,12 +219,19 @@
       }
     }
 
+    &--1 {
+      main {
+        width: 34.8rem;
+      }
+    }
+
     &--2 {
-      @include for-size(phone) {
+      @include for-size(1100px) {
         display: none;
       }
       main {
         height: 100%;
+        width: 31.6rem;
       }
     }
 
@@ -277,6 +281,7 @@
 
     &--card__5 {
       height: 34.8rem !important;
+      width: 46.4rem;
 
       @include for-size(500px) {
         display: none;
@@ -359,7 +364,7 @@
     transition: border 0.25s ease;
     font-size: 3.2rem;
     font-weight: 600;
-    font-family: "lato", sans-serif;
+    font-family: 'lato', sans-serif;
 
     span {
       display: block;
@@ -381,7 +386,7 @@
     border: 1px solid $color-white;
     transition: border 300ms ease-in;
     color: $color-white;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
 
     &::after {
       background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
