@@ -30,7 +30,7 @@
   h1 {
     font-size: 6rem;
     line-height: 7.3rem;
-    font-weight: 800;
+    font-weight: 600;
     background-image: linear-gradient(
       95deg,
       $color-green 0,
@@ -140,14 +140,14 @@
 .design {
   overflow: hidden;
   padding: 5rem 2rem 0 2rem;
-  
+
   &__layout {
     display: grid;
     grid-template-columns: 34.8rem 31.6rem 46.4rem;
     justify-content: center;
     gap: 5rem;
 
-    @include for-size(1200px, down){
+    @include for-size(1200px, down) {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -230,9 +230,8 @@
     }
 
     &--2 {
-
-      @include for-size(tablet){
-        display:none;
+      @include for-size(tablet) {
+        display: none;
       }
 
       main {
@@ -242,7 +241,8 @@
 
     &--card__1 {
       div {
-        background: url(https://drive.google.com/uc?export=download&id=1Ic-f6Wjs7peISxLvdzTAkL864FODXAw-) center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1Ic-f6Wjs7peISxLvdzTAkL864FODXAw-)
+          center / cover;
       }
       a {
         &::after {
@@ -253,7 +253,8 @@
 
     &--card__2 {
       div {
-        background: url(https://drive.google.com/uc?export=download&id=1IZPNCZ3XCB3gm6iNp1V0La_BhEgAMKFc) center center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1IZPNCZ3XCB3gm6iNp1V0La_BhEgAMKFc)
+          center center / cover;
       }
       a {
         &::after {
@@ -264,7 +265,8 @@
 
     &--card__3 {
       div {
-        background: url(https://drive.google.com/uc?export=download&id=1slf4TKz4TtqOp9IP1t1DbPkS3WXw_AMk) center center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1slf4TKz4TtqOp9IP1t1DbPkS3WXw_AMk)
+          center center / cover;
       }
       a {
         &::after {
@@ -286,12 +288,13 @@
 
     &--card__5 {
       height: 34.8rem !important;
-      @include for-size(tablet){
+      @include for-size(tablet) {
         display: none;
       }
-      
+
       div {
-        background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA)
+          center / cover;
       }
       a {
         &::after {
@@ -315,7 +318,7 @@
       border: none;
       width: 100%;
 
-      @include for-size(phone){
+      @include for-size(phone) {
         margin-top: 0;
       }
 
@@ -355,7 +358,7 @@
     grid-auto-rows: 40.32rem;
     gap: 2rem;
 
-    @include for-size(1200px, down){
+    @include for-size(1200px, down) {
       grid-template-columns: repeat(3, 1fr);
     }
 
