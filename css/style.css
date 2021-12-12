@@ -358,7 +358,8 @@ a {
   width: auto;
   border: 1px solid #fff;
   transition: border 300ms ease-in;
-  color: #fff; }
+  color: #fff;
+  font-family: "Inter", sans-serif; }
   .blog .button__blog::after {
     background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
     border-radius: 3rem; }

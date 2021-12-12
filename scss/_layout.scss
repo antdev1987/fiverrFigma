@@ -381,6 +381,7 @@
     border: 1px solid $color-white;
     transition: border 300ms ease-in;
     color: $color-white;
+    font-family: "Inter", sans-serif;
 
     &::after {
       background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);
