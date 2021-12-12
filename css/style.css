@@ -474,20 +474,20 @@ a {
     background: transparent;
     z-index: 10;
     margin-left: -2rem; }
-    .animation input:focus + div {
-      width: 25rem; }
-      @media (max-width: 1220px) {
-        .animation input:focus + div {
-          width: 30rem; } }
-      .animation input:focus + div span {
-        transform: rotateY(160deg); }
-      .animation input:focus + div li {
-        opacity: 1;
-        z-index: 10; }
-      .animation input:focus + div::after {
-        opacity: 0; }
     .animation input:focus {
       width: 25rem;
       background: transparent;
-      color: transparent;
       cursor: initial; }
+
+.big {
+  width: 25rem; }
+  @media (max-width: 1220px) {
+    .big {
+      width: 30rem; } }
+  .big span {
+    transform: rotateY(160deg); }
+  .big li {
+    opacity: 1;
+    z-index: 10; }
+  .big::after {
+    opacity: 0; }

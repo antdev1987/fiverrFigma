@@ -89,32 +89,31 @@
     z-index: 10;
     margin-left: -2rem;
 
-    &:focus + div {
-      width: 25rem;
-
-      @include for-size(1220px) {
-        width: 30rem;
-      }
-
-      span {
-        transform: rotateY(160deg);
-      }
-
-      li {
-        opacity: 1;
-        z-index: 10;
-      }
-
-      &::after {
-        opacity: 0;
-      }
-    }
-
     &:focus {
       width: 25rem;
       background: transparent;
-      color: transparent;
       cursor: initial;
     }
+  }
+}
+
+.big {
+  width: 25rem;
+
+  @include for-size(1220px) {
+    width: 30rem;
+  }
+
+  span {
+    transform: rotateY(160deg);
+  }
+
+  li {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  &::after {
+    opacity: 0;
   }
 }
