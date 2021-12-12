@@ -46,7 +46,7 @@
           discussions!
         </p>
        <div class="animation">
-          <input type="button" value="Get to know me"/>
+          <input type="button" id="btn" class="input" value="Get to know me"/>
           <div class="flex align-Center jf-around">
               <ul class="flex align-Center ">
                 <li>
@@ -65,7 +65,7 @@
                   </a>
                 </li>
               </ul>
-              <span>
+              <span class="arrows">
                 <img src="/images/Arrow.png" alt="">
                 <img src="/images/Arrow.png" alt="">
               </span>
@@ -343,5 +343,23 @@
       //////////////////
       //////////////////
     -->
+    <script>
+const btn = document.getElementById("btn")
+const animation = document.querySelector(".animation")
+const arrow = document.querySelector(".arrows")
+
+
+arrow.addEventListener(
+  "click", () => {
+    animation.classList.toggle("big")
+  }
+)
+
+btn.addEventListener(
+  "click", () => {
+    animation.classList.toggle("big")
+  }
+)
+    </script>
   </body>
 </html>
