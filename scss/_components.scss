@@ -96,6 +96,10 @@
   width: 25rem !important;
   transition: all 300ms ease;
 
+  @include for-size(700px){
+    width: 30rem !important;
+  }
+
   span {
     transform: rotateY(160deg);
   }

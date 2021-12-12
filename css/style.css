@@ -163,7 +163,7 @@ a {
 .header h1 {
   font-size: 6rem;
   line-height: 7.3rem;
-  font-weight: 700;
+  font-weight: 800;
   background-image: linear-gradient(95deg, #5effca 0, #49a8ff 35%, #5effca 80%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -218,7 +218,7 @@ a {
   overflow: hidden; }
   .design__layout {
     gap: 5rem; }
-    @media (max-width: 490px) {
+    @media (max-width: 500px) {
       .design__layout {
         flex-direction: column; } }
   .design h2,
@@ -231,7 +231,7 @@ a {
     transform: scale(1.1); }
   .design h3 {
     display: none; }
-  @media (max-width: 490px) {
+  @media (max-width: 500px) {
     .design h2 {
       display: none; }
     .design h3 {
@@ -240,7 +240,7 @@ a {
     flex: 1;
     gap: 5rem; }
     .design__box main {
-      height: 30rem;
+      height: 26.3rem;
       position: relative;
       z-index: 10;
       overflow: hidden; }
@@ -257,7 +257,8 @@ a {
         color: #fff;
         z-index: 10;
         font-size: 3.2rem;
-        font-weight: 600; }
+        font-weight: 600;
+        font-family: 'lato', sans-serif; }
         .design__box main a span {
           display: block;
           font-size: 1.2rem;
@@ -272,28 +273,30 @@ a {
     .design__box--2 main {
       height: 100%; }
     .design__box--card__1 div {
-      background: url(../images/Img.png) center center/cover; }
+      background: url(../images/img1.svg) center center/cover; }
     .design__box--card__1 a::after {
       background: rgba(15, 49, 61, 0.6); }
     .design__box--card__2 div {
-      background: url(../images/img2.png) center center/cover; }
+      background: url(../images/img2.svg) center center/cover; }
     .design__box--card__2 a::after {
       background: rgba(79, 13, 86, 0.6); }
     .design__box--card__3 div {
-      background: url(../images/img3.png) center center/cover; }
+      background: url(../images/img3.svg) center center/cover; }
     .design__box--card__3 a::after {
       background: rgba(94, 96, 12, 0.6); }
     .design__box--card__4 div {
-      background: url(../images/img4.png) center center/cover; }
+      background: url(../images/img4.svg); }
     .design__box--card__4 a::after {
       background: rgba(0, 55, 108, 0.6); }
-    @media (max-width: 490px) {
-      .design__box--card__5 {
-        display: none; } }
-    .design__box--card__5 div {
-      background: url(../images/img5.png) center center/cover; }
-    .design__box--card__5 a::after {
-      background: rgba(49, 136, 107, 0.63); }
+    .design__box--card__5 {
+      height: 34.8rem !important; }
+      @media (max-width: 500px) {
+        .design__box--card__5 {
+          display: none; } }
+      .design__box--card__5 div {
+        background: url(../images/img5.png) center/cover; }
+      .design__box--card__5 a::after {
+        background: rgba(49, 136, 107, 0.63); }
     .design__box--card__6 a::after {
       background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%); }
     @media (max-width: 490px) {
@@ -313,7 +316,8 @@ a {
         border: 1px solid;
         transition: border 300ms ease-in-out;
         font-size: 2.4rem;
-        border-radius: 0; }
+        border-radius: 0;
+        font-family: 'lato', sans-serif; }
         .design__box button a::first-letter {
           text-transform: capitalize; }
         .design__box button a:hover {
@@ -333,10 +337,13 @@ a {
   position: relative;
   border: 1px solid transparent;
   transition: border 0.25s ease;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  font-weight: 600;
+  font-family: "lato", sans-serif; }
   .blog a span {
     display: block;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6); }
   .blog a::after {
     background: #171717; }
   .blog a:hover {
@@ -401,10 +408,13 @@ a {
     display: none; } }
 
 .collaborate h2 {
-  font-size: 5.2rem; }
+  font-size: 5.2rem;
+  font-weight: 800; }
 
 .footer {
-  font-size: 1.8rem; }
+  font-size: 1.6rem; }
+  .footer p {
+    font-family: 'lato', sans-serif; }
 
 .card-animated {
   width: 100%;
@@ -485,6 +495,9 @@ a {
 .big {
   width: 25rem !important;
   transition: all 300ms ease; }
+  @media (max-width: 700px) {
+    .big {
+      width: 30rem !important; } }
   .big span {
     transform: rotateY(160deg); }
   .big li {
