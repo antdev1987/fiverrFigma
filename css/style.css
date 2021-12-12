@@ -336,10 +336,16 @@ a {
 
 .blog__layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(3, minmax(40rem, 1fr));
   grid-auto-rows: 40.32rem;
   gap: 2rem; }
-  @media (max-width: 767px) {
+  @media (max-width: 1200px) {
+    .blog__layout {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) {
+    .blog__layout {
+      grid-template-columns: minmax(28.1rem, 1fr); } }
+  @media (max-width: 768px) {
     .blog__layout {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 40.32rem 40.32rem; } }

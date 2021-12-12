@@ -351,11 +351,19 @@
 .blog {
   &__layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(3, minmax(40rem, 1fr));
     grid-auto-rows: 40.32rem;
     gap: 2rem;
 
-    @include for-size(phone) {
+    @include for-size(1200px, down){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-size(tablet) {
+      grid-template-columns: minmax(28.1rem, 1fr);
+    }
+
+    @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 40.32rem 40.32rem;
     }
