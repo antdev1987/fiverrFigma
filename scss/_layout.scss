@@ -139,11 +139,20 @@
 ///////////////////////
 .design {
   overflow: hidden;
+  padding: 5rem 2rem 0 2rem;
+  
   &__layout {
+    display: grid;
+    grid-template-columns: 34.8rem 31.6rem 46.4rem;
+    justify-content: center;
     gap: 5rem;
 
-    @include for-size(500px) {
-      flex-direction: column;
+    @include for-size(1024px, down){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-size(tablet) {
+      grid-template-columns: minmax(28.1rem, 1fr);
     }
   }
 
@@ -165,7 +174,7 @@
     display: none;
   }
 
-  @include for-size(500px) {
+  @include for-size(tablet) {
     h2 {
       display: none;
     }
@@ -190,6 +199,7 @@
         position: absolute;
         z-index: -1;
         transition: all 300ms ease;
+        transform: scale(1.05);
       }
 
       a {
@@ -219,25 +229,20 @@
       }
     }
 
-    &--1 {
-      main {
-        width: 34.8rem;
-      }
-    }
-
     &--2 {
-      @include for-size(1100px) {
-        display: none;
+
+      @include for-size(tablet){
+        display:none;
       }
+
       main {
         height: 100%;
-        width: 31.6rem;
       }
     }
 
     &--card__1 {
       div {
-        background: url(../images/img1.svg) center center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1Ic-f6Wjs7peISxLvdzTAkL864FODXAw-) center / cover;
       }
       a {
         &::after {
@@ -248,7 +253,7 @@
 
     &--card__2 {
       div {
-        background: url(../images/img2.svg) center center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1IZPNCZ3XCB3gm6iNp1V0La_BhEgAMKFc) center center / cover;
       }
       a {
         &::after {
@@ -259,7 +264,7 @@
 
     &--card__3 {
       div {
-        background: url(../images/img3.svg) center center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1slf4TKz4TtqOp9IP1t1DbPkS3WXw_AMk) center center / cover;
       }
       a {
         &::after {
@@ -270,7 +275,7 @@
 
     &--card__4 {
       div {
-        background: url(../images/img4.svg);
+        background: url(https://drive.google.com/uc?export=download&id=1RlIlj_vwl7lqSMGZw4xPhsJLgB7KmCZl);
       }
       a {
         &::after {
@@ -280,15 +285,12 @@
     }
 
     &--card__5 {
-      height: 34.8rem !important;
-      width: 46.4rem;
-
-      @include for-size(500px) {
+      @include for-size(tablet){
         display: none;
       }
-
+      
       div {
-        background: url(../images/img5.png) center / cover;
+        background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center / cover;
       }
       a {
         &::after {
@@ -303,10 +305,6 @@
           background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%);
         }
       }
-
-      @include for-size(490px) {
-        margin-top: -10rem !important;
-      }
     }
 
     button {
@@ -315,6 +313,10 @@
       background: transparent;
       border: none;
       width: 100%;
+
+      @include for-size(phone){
+        margin-top: 0;
+      }
 
       a {
         display: inline-block;
