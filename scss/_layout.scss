@@ -23,6 +23,10 @@
 /// Header Start
 ///////////////////////
 .header {
+  padding: 5rem 2rem 0 2rem;
+  @include for-size(tablet,up){
+    padding-left: 12.3rem;
+  }
   h1 {
     font-size: 6rem;
     line-height: 7.3rem;
@@ -38,6 +42,8 @@
     -webkit-text-fill-color: transparent;
     background-size: 200%;
     transition: background-position 300ms ease;
+
+    
 
     &:hover {
       background-position: right;
