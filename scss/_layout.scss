@@ -26,6 +26,7 @@
   h1 {
     font-size: 6rem;
     line-height: 7.3rem;
+    font-weight: 700;
     background-image: linear-gradient(
       95deg,
       $color-green 0,
@@ -36,7 +37,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
-    transition: background-position 1s ease;
+    transition: background-position 300ms ease;
 
     &:hover {
       background-position: right;
@@ -68,7 +69,7 @@
       height: 100%;
       width: 100%;
       opacity: 0;
-      transition: opacity 1s ease-in-out;
+      transition: opacity 300ms ease-in-out;
       z-index: -1;
     }
 
@@ -115,11 +116,13 @@
     }
 
     p {
-      transition: all 1s ease-in-out;
+      transition: all 300ms ease-in-out;
       position: absolute;
       top: 85%;
       left: 2rem;
       font-size: 3rem;
+      font-weight: 600;
+      font-family: 'lato', sans-serif;
     }
   }
 }
@@ -145,6 +148,7 @@
     font-size: 6rem;
     color: $color-white;
     transition: transform 0.25s ease;
+    font-weight: 600;
   }
 
   h2 {
@@ -191,10 +195,12 @@
         color: $color-white;
         z-index: 10;
         font-size: 3.2rem;
+        font-weight: 600;
 
         span {
           display: block;
           font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.68);
         }
       }
 
@@ -278,7 +284,6 @@
     }
 
     &--card__6 {
-      
       a {
         &::after {
           background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%);
@@ -303,7 +308,7 @@
         width: 100%;
         padding: 2rem 0;
         border: 1px solid;
-        transition: border 1s ease-in-out;
+        transition: border 300ms ease-in-out;
         font-size: 2.4rem;
         border-radius: 0;
 
