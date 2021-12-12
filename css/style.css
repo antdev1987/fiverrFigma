@@ -253,11 +253,11 @@ a {
         width: 100%;
         position: absolute;
         z-index: -1;
-        transition: all 0.7s ease; }
+        transition: all 300ms ease; }
       .design__box main a {
         padding: 2rem 2rem;
         opacity: 0;
-        transition: all 0.7s ease;
+        transition: all 300ms ease;
         color: #fff;
         z-index: 10;
         font-size: 3.2rem;
@@ -357,7 +357,7 @@ a {
   height: auto;
   width: auto;
   border: 1px solid #fff;
-  transition: border 0.7s ease-in;
+  transition: border 300ms ease-in;
   color: #fff; }
   .blog .button__blog::after {
     background: linear-gradient(250.7deg, #5effca 21.99%, #49a8ff 62.97%);

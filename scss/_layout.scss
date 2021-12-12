@@ -191,13 +191,13 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        transition: all 0.7s ease;
+        transition: all 300ms ease;
       }
 
       a {
         padding: 2rem 2rem;
         opacity: 0;
-        transition: all 0.7s ease;
+        transition: all 300ms ease;
         color: $color-white;
         z-index: 10;
         font-size: 3.2rem;
@@ -379,7 +379,7 @@
     height: auto;
     width: auto;
     border: 1px solid $color-white;
-    transition: border 0.7s ease-in;
+    transition: border 300ms ease-in;
     color: $color-white;
 
     &::after {
