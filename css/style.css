@@ -226,7 +226,7 @@ a {
     grid-template-columns: 34.8rem 31.6rem 46.4rem;
     justify-content: center;
     gap: 5rem; }
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       .design__layout {
         grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 768px) {
@@ -299,13 +299,15 @@ a {
       background: url(https://drive.google.com/uc?export=download&id=1RlIlj_vwl7lqSMGZw4xPhsJLgB7KmCZl); }
     .design__box--card__4 a::after {
       background: rgba(0, 55, 108, 0.6); }
-    @media (max-width: 768px) {
-      .design__box--card__5 {
-        display: none; } }
-    .design__box--card__5 div {
-      background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center/cover; }
-    .design__box--card__5 a::after {
-      background: rgba(49, 136, 107, 0.63); }
+    .design__box--card__5 {
+      height: 34.8rem !important; }
+      @media (max-width: 768px) {
+        .design__box--card__5 {
+          display: none; } }
+      .design__box--card__5 div {
+        background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center/cover; }
+      .design__box--card__5 a::after {
+        background: rgba(49, 136, 107, 0.63); }
     .design__box--card__6 a::after {
       background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%); }
     .design__box button {

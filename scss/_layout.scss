@@ -147,7 +147,7 @@
     justify-content: center;
     gap: 5rem;
 
-    @include for-size(1024px, down){
+    @include for-size(1200px, down){
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -285,6 +285,7 @@
     }
 
     &--card__5 {
+      height: 34.8rem !important;
       @include for-size(tablet){
         display: none;
       }
