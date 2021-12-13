@@ -30,7 +30,7 @@
   }
   h1 {
     font-size: 6rem;
-    line-height:6.5rem;
+    line-height: 6.5rem;
     font-weight: 600;
     background-image: linear-gradient(
       95deg,
@@ -52,10 +52,10 @@
     font-size: 2rem;
     line-height: 3rem;
 
-    span{
+    span {
       display: block;
 
-      @include for-size(tablet){
+      @include for-size(tablet) {
         display: inline;
       }
     }
@@ -87,45 +87,47 @@
       z-index: -1;
     }
 
-    @include linear(1) {
-      background: linear-gradient(
-        202.92deg,
-        #fff497 11.49%,
-        #ff7c97 39.59%,
-        #7b61ff 68.89%
-      );
-    }
-
-    @include linear(2) {
-      background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%);
-    }
-
-    @include linear(3) {
-      background: linear-gradient(
-        198.82deg,
-        #81348d 5.34%,
-        #ff7c97 53.63%,
-        #ff5174 85.97%
-      );
-    }
-    @include linear(4) {
-      background: linear-gradient(
-        167.93deg,
-        #f6ff97 8.81%,
-        #88e475 38.84%,
-        #43a685 65.9%
-      );
-    }
-
-    &:hover {
-      p {
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
+    @include for-size(phone, up) {
+      @include linear(1) {
+        background: linear-gradient(
+          202.92deg,
+          #fff497 11.49%,
+          #ff7c97 39.59%,
+          #7b61ff 68.89%
+        );
       }
 
-      &::after {
-        opacity: 1;
+      @include linear(2) {
+        background: linear-gradient(242.22deg, #5effca 16.46%, #4a34b9 49.65%);
+      }
+
+      @include linear(3) {
+        background: linear-gradient(
+          198.82deg,
+          #81348d 5.34%,
+          #ff7c97 53.63%,
+          #ff5174 85.97%
+        );
+      }
+      @include linear(4) {
+        background: linear-gradient(
+          167.93deg,
+          #f6ff97 8.81%,
+          #88e475 38.84%,
+          #43a685 65.9%
+        );
+      }
+
+      &:hover {
+        p {
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+        }
+
+        &::after {
+          opacity: 1;
+        }
       }
     }
 
@@ -177,12 +179,6 @@
     color: $color-white;
     transition: transform 0.25s ease;
     font-weight: 600;
-  }
-
-  h2 {
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   h3 {
@@ -405,6 +401,7 @@
       display: block;
       font-size: 1.8rem;
       color: rgba(255, 255, 255, 0.6);
+      font-weight: 300;
 
       @include for-size(tablet) {
         padding-bottom: 1rem;
@@ -499,7 +496,7 @@
         }
       }
 
-      &--3 {
+      &--4 {
         display: none;
       }
     }
@@ -516,6 +513,10 @@
   h2 {
     font-size: 5.2rem;
     font-weight: 800;
+
+    @include for-size(phone, down) {
+      font-weight: 900;
+    }
   }
 }
 ///////////////////////
