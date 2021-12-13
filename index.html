@@ -17,9 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <!-- 
        //////////////////
        //////////////////
@@ -43,37 +46,39 @@
       <div class="container">
         <h1 class="txt-Capi">build purposeful design</h1>
         <p class="color-White pt-2 pb-5">
-          Hello I am Ofi! This space shows my ability of building elgant and
-          robust <br />
+          <span>
+            Hello I am Ofi! This space shows my ability of building elgant and
+            robust
+          </span>
           interface design. If it possibly fits you, let's have some
           discussions!
         </p>
-       <div class="animation">
-          <input type="button" id="btn" class="input" value="Get to know me"/>
+        <div class="animation">
+          <input type="button" id="btn" class="input" value="Get to know me" />
           <div class="flex align-Center jf-around">
-              <ul class="flex align-Center ">
-                <li>
-                  <a href="https://dribbble.com/ofinidaan">
-                    <img src="/images/Outline.png" alt="" />
-                  </a>
-                </li>
-                <li class="pl-3 pr-3">
-                  <a href="https://www.linkedin.com/in/nidaan-khofiya">
-                    <img src="/images/Vector.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://medium.com/@ofinidaan">
-                    <img src="/images/vec.png" alt="" />
-                  </a>
-                </li>
-              </ul>
-              <span class="arrows">
-                <img src="/images/Arrow.png" alt="">
-                <img src="/images/Arrow.png" alt="">
-              </span>
+            <ul class="flex align-Center">
+              <li>
+                <a href="https://dribbble.com/ofinidaan">
+                  <img src="/images/Outline.png" alt="" />
+                </a>
+              </li>
+              <li class="pl-3 pr-3">
+                <a href="https://www.linkedin.com/in/nidaan-khofiya">
+                  <img src="/images/Vector.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="https://medium.com/@ofinidaan">
+                  <img src="/images/vec.png" alt="" />
+                </a>
+              </li>
+            </ul>
+            <span class="arrows">
+              <img src="/images/Arrow.png" alt="" />
+              <img src="/images/Arrow.png" alt="" />
+            </span>
           </div>
-       </div>
+        </div>
       </div>
     </header>
     <!-- 
@@ -182,7 +187,8 @@
                 class="card-animated"
               >
                 <span class="txt-Upper"> PROTOTYPE </span>
-                App to plan <br> your trip
+                App to plan <br />
+                your trip
               </a>
             </main>
             <button class="design__box--card__6">
@@ -236,7 +242,7 @@
             class="color-White card-animated pt-5 pl-3 pr-2"
           >
             <span class="txt-Upper"> progress </span>
-            My mistakes during Learning UI Design
+            What I've learned for a month
           </a>
         </main>
         <main class="blog__box blog__box--3">
@@ -244,8 +250,8 @@
             href="https://medium.com/@ofinidaan/my-mistakes-during-learning-ux-design-9d14aed99a4c"
             class="color-White card-animated pt-5 pl-3 pr-2"
           >
-            <span class="txt-Upper"> CASE STUDY </span>
-            Mengoptimalkan Penggunaan Sipebi
+            <span class="txt-Upper"> progress </span>
+            My mistakes during Learning UI Design
           </a>
         </main>
         <main class="blog__box blog__box--4">
@@ -254,24 +260,24 @@
             class="color-White card-animated pt-5 pl-3 pr-2"
           >
             <span class="txt-Upper"> CASE STUDY </span>
-            Adding new feature in Edmodo, yes or no?
+            Mengoptimalkan Penggunaan Sipebi
           </a>
         </main>
         <main class="blog__box blog__box--5">
           <a
-            href="https://medium.com/@ofinidaan/is-clean-ui-a-good-solution-727abb38cff9"
+            href="https://medium.com/@ofinidaan/ux-case-study-adding-new-feature-in-edmodo-yes-or-no-f59d9cac9a9"
             class="color-White card-animated pt-5 pl-3 pr-2"
           >
-            <span class="txt-Upper"> progress </span>
-            What I've learned for a month
+            <span class="txt-Upper"> CASE STUDY </span>
+            Adding new feature in Edmodo, yes or no?
           </a>
         </main>
         <main class="blog__box blog__box--6">
           <a
-            href="https://medium.com/@ofinidaan/ux-case-study-adding-new-feature-in-edmodo-yes-or-no-f59d9cac9a9"
+            href="https://medium.com/@ofinidaan/is-clean-ui-a-good-solution-727abb38cff9"
             class="color-White card-animated pt-5 pl-3 pr-2"
           >
-            <span class="txt-Upper"> TIPS </span>
+            <span class="txt-Upper"> tips </span>
             Is Clean UI a good solution?
           </a>
         </main>
@@ -346,22 +352,17 @@
       //////////////////
     -->
     <script>
-const btn = document.getElementById("btn")
-const animation = document.querySelector(".animation")
-const arrow = document.querySelector(".arrows")
+      const btn = document.getElementById('btn');
+      const animation = document.querySelector('.animation');
+      const arrow = document.querySelector('.arrows');
 
+      arrow.addEventListener('click', () => {
+        animation.classList.toggle('big');
+      });
 
-arrow.addEventListener(
-  "click", () => {
-    animation.classList.toggle("big")
-  }
-)
-
-btn.addEventListener(
-  "click", () => {
-    animation.classList.toggle("big")
-  }
-)
+      btn.addEventListener('click', () => {
+        animation.classList.toggle('big');
+      });
     </script>
   </body>
 </html>
