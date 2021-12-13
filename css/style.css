@@ -165,13 +165,12 @@ a {
       grid-auto-rows: 130px; } }
 
 .header {
-  padding: 5rem 2rem 0 2rem; }
+  padding: 10rem 2rem 0 2rem; }
   @media (min-width: 768px) {
     .header {
       padding-left: 12.3rem; } }
   .header h1 {
-    font-size: 6rem;
-    line-height: 6.5rem;
+    font-size: 7rem;
     font-weight: 600;
     background-image: linear-gradient(95deg, #5effca 0, #49a8ff 35%, #5effca 80%);
     -webkit-background-clip: text;
@@ -181,6 +180,9 @@ a {
     transition: background-position 300ms ease; }
     .header h1:hover {
       background-position: right; }
+    @media (max-width: 767px) {
+      .header h1 {
+        font-size: 8rem; } }
   .header p {
     font-size: 2rem;
     line-height: 3rem; }
@@ -261,96 +263,95 @@ a {
       display: none; }
     .design h3 {
       display: block; } }
-  .design__box {
-    flex: 1;
-    gap: 5rem; }
-    .design__box main {
-      height: 26.3rem;
-      position: relative;
+  .design__box main {
+    height: 26.3rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden; }
+    .design__box main div {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      transition: all 300ms ease;
+      transform: scale(1.05); }
+    .design__box main a {
+      padding: 2rem 2rem;
+      opacity: 0;
+      transition: all 300ms ease;
+      color: #fff;
       z-index: 10;
-      overflow: hidden; }
-      .design__box main div {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-        transition: all 300ms ease;
-        transform: scale(1.05); }
-      .design__box main a {
-        padding: 2rem 2rem;
-        opacity: 0;
-        transition: all 300ms ease;
-        color: #fff;
-        z-index: 10;
-        font-size: 3.2rem;
-        font-weight: 600; }
-        .design__box main a span {
-          display: block;
-          font-size: 1.2rem;
-          color: rgba(255, 255, 255, 0.68); }
-      .design__box main:hover div {
-        transform: scale(1.1); }
-      .design__box main:hover a {
-        opacity: 1; }
+      font-size: 3.2rem;
+      font-weight: 600; }
+      .design__box main a span {
+        display: block;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.68); }
+    .design__box main:hover div {
+      transform: scale(1.1); }
+    .design__box main:hover a {
+      opacity: 1; }
+  .design__box--1 main:nth-child(2) {
+    margin: 5rem 0; }
+  @media (max-width: 768px) {
+    .design__box--2 {
+      display: none; } }
+  .design__box--2 main {
+    height: 100%; }
+  .design__box--card__1 div {
+    background: url(https://drive.google.com/uc?export=download&id=1Ic-f6Wjs7peISxLvdzTAkL864FODXAw-) center/cover; }
+  .design__box--card__1 a::after {
+    background: rgba(15, 49, 61, 0.6); }
+  .design__box--card__2 div {
+    background: url(https://drive.google.com/uc?export=download&id=1IZPNCZ3XCB3gm6iNp1V0La_BhEgAMKFc) center center/cover; }
+  .design__box--card__2 a::after {
+    background: rgba(79, 13, 86, 0.6); }
+  .design__box--card__3 div {
+    background: url(https://drive.google.com/uc?export=download&id=1slf4TKz4TtqOp9IP1t1DbPkS3WXw_AMk) center center/cover; }
+  .design__box--card__3 a::after {
+    background: rgba(94, 96, 12, 0.6); }
+  .design__box--card__4 div {
+    background: url(https://drive.google.com/uc?export=download&id=1RlIlj_vwl7lqSMGZw4xPhsJLgB7KmCZl) center center/cover; }
+  .design__box--card__4 a::after {
+    background: rgba(0, 55, 108, 0.6); }
+  .design__box--card__5 {
+    height: 34.8rem !important; }
     @media (max-width: 768px) {
-      .design__box--2 {
+      .design__box--card__5 {
         display: none; } }
-    .design__box--2 main {
-      height: 100%; }
-    .design__box--card__1 div {
-      background: url(https://drive.google.com/uc?export=download&id=1Ic-f6Wjs7peISxLvdzTAkL864FODXAw-) center/cover; }
-    .design__box--card__1 a::after {
-      background: rgba(15, 49, 61, 0.6); }
-    .design__box--card__2 div {
-      background: url(https://drive.google.com/uc?export=download&id=1IZPNCZ3XCB3gm6iNp1V0La_BhEgAMKFc) center center/cover; }
-    .design__box--card__2 a::after {
-      background: rgba(79, 13, 86, 0.6); }
-    .design__box--card__3 div {
-      background: url(https://drive.google.com/uc?export=download&id=1slf4TKz4TtqOp9IP1t1DbPkS3WXw_AMk) center center/cover; }
-    .design__box--card__3 a::after {
-      background: rgba(94, 96, 12, 0.6); }
-    .design__box--card__4 div {
-      background: url(https://drive.google.com/uc?export=download&id=1RlIlj_vwl7lqSMGZw4xPhsJLgB7KmCZl) center center/cover; }
-    .design__box--card__4 a::after {
-      background: rgba(0, 55, 108, 0.6); }
-    .design__box--card__5 {
-      height: 34.8rem !important; }
+    .design__box--card__5 div {
+      background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center/cover; }
+    .design__box--card__5 a::after {
+      background: rgba(49, 136, 107, 0.63); }
+  .design__box--card__6 a::after {
+    background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%); }
+  .design__box button {
+    position: relative;
+    margin-top: 5rem;
+    background: transparent;
+    border: none;
+    width: 100%; }
+    @media (max-width: 767px) {
+      .design__box button {
+        margin-top: 0; } }
+    .design__box button a {
+      display: inline-block;
+      color: #fff;
+      width: 100%;
+      padding: 2rem 0;
+      border: 1px solid;
+      transition: border 300ms ease-in-out;
+      font-size: 2.4rem;
+      border-radius: 0;
+      font-family: 'lato', sans-serif;
+      font-weight: 600; }
+      .design__box button a::first-letter {
+        text-transform: capitalize; }
+      .design__box button a:hover {
+        border: 1px solid transparent; }
       @media (max-width: 768px) {
-        .design__box--card__5 {
-          display: none; } }
-      .design__box--card__5 div {
-        background: url(https://drive.google.com/uc?export=download&id=1IRjYKvj-8krBZlEbqgyl_A8GYGKc85RA) center/cover; }
-      .design__box--card__5 a::after {
-        background: rgba(49, 136, 107, 0.63); }
-    .design__box--card__6 a::after {
-      background: linear-gradient(254.36deg, #7b61ff 2.89%, #ff7c97 60.94%); }
-    .design__box button {
-      position: relative;
-      margin-top: 5rem;
-      background: transparent;
-      border: none;
-      width: 100%; }
-      @media (max-width: 767px) {
-        .design__box button {
-          margin-top: 0; } }
-      .design__box button a {
-        display: inline-block;
-        color: #fff;
-        width: 100%;
-        padding: 2rem 0;
-        border: 1px solid;
-        transition: border 300ms ease-in-out;
-        font-size: 2.4rem;
-        border-radius: 0;
-        font-family: 'lato', sans-serif;
-        font-weight: 600; }
-        .design__box button a::first-letter {
-          text-transform: capitalize; }
-        .design__box button a:hover {
-          border: 1px solid transparent; }
-        @media (max-width: 768px) {
-          .design__box button a {
-            font-size: 2rem !important; } }
+        .design__box button a {
+          font-size: 2rem !important; } }
 
 @media (max-width: 768px) {
   .blog {
@@ -367,7 +368,7 @@ a {
   @media (max-width: 768px) {
     .blog__layout {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto 150px 150px; } }
+      grid-template-rows: auto 130px 130px; } }
 
 .blog a {
   position: relative;
@@ -456,10 +457,13 @@ a {
   .blog__box--4 {
     display: none; } }
 
-.collaborate h2 {
-  font-size: 5.2rem;
-  font-weight: 600;
+.collaborate p {
+  font-size: 52px;
+  font-weight: 700;
   word-break: keep-all; }
+  @media (max-width: 767px) {
+    .collaborate p {
+      font-size: 45px; } }
 
 @media (max-width: 767px) {
   .collaborate a {
@@ -518,7 +522,10 @@ a {
         transition: all 300ms; }
         @media (max-width: 768px) {
           .animation div ul li img {
-            height: 2rem; } }
+            height: 2rem; }
+          .animation div ul li .img__3 {
+            width: 3rem;
+            height: 1.5rem; } }
     .animation div span {
       z-index: 10;
       padding-right: 1rem;
