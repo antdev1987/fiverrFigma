@@ -383,6 +383,7 @@
 .blog {
   @include for-size(tablet) {
     padding: 0 2rem;
+    padding-top: 10rem;
   }
   &__layout {
     display: grid;

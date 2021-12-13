@@ -355,7 +355,8 @@ a {
 
 @media (max-width: 768px) {
   .blog {
-    padding: 0 2rem; } }
+    padding: 0 2rem;
+    padding-top: 10rem; } }
 
 .blog__layout {
   display: grid;
