@@ -449,10 +449,12 @@ a {
 
 .collaborate h2 {
   font-size: 5.2rem;
-  font-weight: 800; }
-  @media (max-width: 767px) {
-    .collaborate h2 {
-      font-weight: 900; } }
+  font-weight: 600;
+  word-break: keep-all; }
+
+@media (max-width: 767px) {
+  .collaborate a {
+    font-size: 13px !important; } }
 
 .footer {
   font-size: 1.6rem; }

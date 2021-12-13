@@ -512,10 +512,13 @@
 .collaborate {
   h2 {
     font-size: 5.2rem;
-    font-weight: 800;
+    font-weight: 600;
+    word-break: keep-all;
+  }
 
-    @include for-size(phone, down) {
-      font-weight: 900;
+  a {
+    @include for-size(phone) {
+      font-size: 13px !important;
     }
   }
 }
