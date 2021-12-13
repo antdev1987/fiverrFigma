@@ -160,6 +160,9 @@ a {
     .menu-grid {
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 30rem; } }
+  @media (max-width: 320px) {
+    .menu-grid {
+      grid-auto-rows: 130px; } }
 
 .header {
   padding: 5rem 2rem 0 2rem; }
@@ -349,6 +352,10 @@ a {
           .design__box button a {
             font-size: 2rem !important; } }
 
+@media (max-width: 768px) {
+  .blog {
+    padding: 0 2rem; } }
+
 .blog__layout {
   display: grid;
   grid-template-columns: repeat(3, minmax(40rem, 1fr));
@@ -360,7 +367,7 @@ a {
   @media (max-width: 768px) {
     .blog__layout {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto 30rem 30rem; } }
+      grid-template-rows: auto 150px 150px; } }
 
 .blog a {
   position: relative;
@@ -371,7 +378,9 @@ a {
   font-family: 'lato', sans-serif; }
   @media (max-width: 768px) {
     .blog a {
-      font-size: 2rem; } }
+      font-size: 2rem;
+      padding: 1rem;
+      padding-top: 2rem; } }
   .blog a span {
     display: block;
     font-size: 1.8rem;
